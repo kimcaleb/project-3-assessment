@@ -1,7 +1,7 @@
 const   
     express = require("express"),
     app = express(),
-    PORT = 3000,
+    PORT = process.env.PORT || 3000,
     ejsLayouts = require("express-ejs-layouts"),
     axios = require("axios");
     
@@ -29,3 +29,6 @@ app.get("/posts", (req,res)=>{
 });
 
 // Listening on
+app.listen(PORT,(err) =>{
+    console.log( err || `Listening on Port ${PORT}`);
+});

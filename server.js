@@ -29,6 +29,3 @@ app.get("/posts", (req,res)=>{
 });
 
 // Listening on
-app.listen(PORT,(err) =>{
-    console.log( err || `Listening on Port ${PORT}`);
-});

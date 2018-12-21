@@ -1,0 +1,18 @@
+<div class="container-fluid headDiv">
+    <p><a href="/">HOME</a> | <a href="/posts">ALL POSTS</a></p>
+    <h1>All Posts</h1>
+</div>
+<div class="container-fluid headDiv">
+    <table class="table">
+        <thead>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+        </thead>
+    <% for (let i=object.length-1; i>=0; i--) { %>
+        <tbody>
+            <td><%= object[i].title %></td>
+            <td><%= object[i].body %></td>
+        </tbody>
+       <% } %>
+    </table>
+</div>
